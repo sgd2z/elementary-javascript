@@ -2,7 +2,7 @@ class Player {
 	constructor() {
 		this.cards = []
 	}
- 
+
 	/**
 	 * Add a card to the players list of cards
 	 * @param {*} card
@@ -10,7 +10,7 @@ class Player {
 	addCard(card) {
 		this.cards.push(card)
 	}
- 
+
 	/**
 	 * Remove a card at a specific index
 	 * @param {Number} index
@@ -18,13 +18,29 @@ class Player {
 	removeCard(index) {
 		this.cards.splice(index, 1)
 	}
- 
-	/**
-	 * Temporarily this will log all the cards to the console.
-	 */
-	showCards() {
-		console.log(this.cards)
-	}
- }
 
- export default Player
+	/**
+	 * Loop through all the cards and show them in the div
+	 * @param {HTMLDivElement} div 
+	 */
+	showCards(div) {
+		let position = 0
+		while (position < this.cards.length) {
+			// get the card
+			let card = this.cards[position]
+
+			// create an image
+			let image = document.createElement("img")
+
+			// set the src property to the URL of the card image
+			image.src = card.imageUrl
+
+			// show the card on the page
+			div.appendChild(image)
+
+			position = position + 1
+		}
+	}
+}
+
+export default Player
