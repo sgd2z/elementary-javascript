@@ -24,6 +24,9 @@ class Player {
 	 * @param {HTMLDivElement} div 
 	 */
 	showCards(div) {
+		// style the div
+		div.classList.add("cardHolder")
+
 		let position = 0
 		while (position < this.cards.length) {
 			// get the card
@@ -33,7 +36,7 @@ class Player {
 			let image = document.createElement("img")
 
 			// set the src property to the URL of the card image
-			image.src = card.imageUrl
+			image.src = "images/pokemon_card_back.jpg"
 
 			// show the card on the page
 			div.appendChild(image)
