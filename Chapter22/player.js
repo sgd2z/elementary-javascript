@@ -1,6 +1,8 @@
 class Player {
-	constructor() {
+	constructor(game) {
+		this.game = game
 		this.cards = []
+		this.turn = false
 	}
 
 	/**
@@ -17,6 +19,13 @@ class Player {
 	 */
 	removeCard(index) {
 		this.cards.splice(index, 1)
+	}
+	
+	/**
+	 * It is this player's turn
+	 */
+	takeTurn() {
+		this.turn = true
 	}
 
 	/**
@@ -35,8 +44,22 @@ class Player {
 			// create an image
 			let image = document.createElement("img")
 
-			// set the src property to the URL of the card image
+			// set the src property to card back image
 			image.src = "images/pokemon_card_back.jpg"
+
+			// when image is clicked, show the card image 
+			const imageClicked = () => {
+				// If it is not this player's turn, exit and do nothing
+				if (this.turn === false) {
+					return
+				}
+				image.removeEventListener("click", imageClicked)
+				image.src = card.imageUrl
+				// This player's turn is over
+				this.turn = false
+				this.game.nextTurn(card)
+			}
+			image.addEventListener("click", imageClicked)
 
 			// show the card on the page
 			div.appendChild(image)
