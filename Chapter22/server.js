@@ -5,7 +5,7 @@ const express = require('express')
 const app = express()
 
 // this is the port on the computer that express will use
-const port = 1337
+const port = 1338
 
 // This tells express to send the files in current folder when someone goes to our server.
 app.use(express.static('.'))
