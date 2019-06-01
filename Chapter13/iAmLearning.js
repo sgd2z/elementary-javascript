@@ -1,18 +1,28 @@
-let myDiv = document.createElement('div')
-myDiv.innerHTML = "Enter Something in this Text Box: "
-let myTextBox = document.createElement('input')
-myTextBox.type = 'text'
-myDiv.appendChild(myTextBox)
-let myButton = document.createElement('button')
+let bigRed = document.createElement('div')
+bigRed.classList.add('bigred')
+bigRed.innerHTML = 'This div has the bigred class'
+document.body.appendChild(bigRed)
 
-// create a function that we will call when the button is clicked:
-const doSomethingWhenButtonIsClicked = () => {
-	alert(myTextBox.value); // show a popup with the text in the textbox
+let smallBlue = document.createElement('div')
+smallBlue.classList.add('smallblue')
+smallBlue.innerHTML = 'This div has the smallblue class'
+document.body.appendChild(smallBlue)
+
+let colorList = ['red', 'blue', 'purple']
+let position = 0
+while (position < colorList.length) {
+    let div = document.createElement('div')
+    div.innerHTML = 'Some Text'
+    div.classList.add("big", colorList[position])
+    document.body.appendChild(div)
+    position = position + 1
 }
 
-// addEventListener is how we listen to when things happen:
-myButton.addEventListener("click", doSomethingWhenButtonIsClicked)
-
-myButton.innerHTML = 'Click Me!'
-myDiv.appendChild(myButton)
-document.body.appendChild(myDiv)
+position = 0
+while (position < colorList.length) {
+    let div = document.createElement('div')
+    div.innerHTML = 'Some Text'
+    div.classList.add("small", colorList[position])
+    document.body.appendChild(div)
+    position = position + 1
+}

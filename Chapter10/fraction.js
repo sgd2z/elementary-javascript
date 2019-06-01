@@ -28,6 +28,8 @@ class Fraction {
 	 * let f1 = new Fraction(2, 3)
 	 */
 	constructor(numerator, denominator) {
+		this.numerator = numerator
+		this.denominator = denominator
 	}
 
 	/**
@@ -65,4 +67,8 @@ class Fraction {
 	}
 }
 
-export default Fraction
+let f1 = new Fraction(2, 3)
+let f2 = new Fraction(3, 4)
+let f3 = f1.add(f2)
+
+document.write(f3.numerator + "<br>" + f3.denominator)

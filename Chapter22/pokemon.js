@@ -14,26 +14,35 @@ class Pokemon {
 		let data = await file.json()
 		let cardList = data.cards; // The results are in the cards property
 
-		// loop backwards because we might be removing things.
-		let position = cardList.length - 1
-		while (position > -1) {
+		let position = 0
+		while (position < cardList.length) {
 			let card = cardList[position]
-			let attacksPosition = card.attacks.length - 1
-			while (attacksPosition > -1) {
-				let attack = card.attacks[attacksPosition]
-				let damage = parseInt(attack.damage)
-				if (isNaN(damage)) {
-					card.attacks.splice(attacksPosition, 1)
+			let attacksPosition = 0
+
+			// If the card has attacks then remove attacks without damage
+			if (card.attacks !== undefined) {
+				while (attacksPosition < card.attacks.length) {
+					let attack = card.attacks[attacksPosition]
+					let damage = parseInt(attack.damage)
+					// If damage is not a number, remove it
+					if (isNaN(damage)) {
+						card.attacks.splice(attacksPosition, 1)
+					} else {
+						// Only move forward if we are not removing something
+						attacksPosition = attacksPosition + 1
+					}
 				}
-				attacksPosition = attacksPosition - 1
 			}
+
 			// If there are no attacks, remove the card from the cardList
-			if (card.attacks.length == 0) {
+			if (card.attacks === undefined || card.attacks.length == 0) {
 				cardList.splice(position, 1)
+			} else {
+				// Only move forward if we are not removing something
+				position = position + 1
 			}
-			position = position - 1
 		}
-		return cardList 
+		return cardList
 	}
 
 	/**

@@ -10,3 +10,4 @@ while (position < momsBoringShoppingList.length) {
 	document.write('<br>')
 	position = position + 1
 }
+

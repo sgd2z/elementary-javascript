@@ -7,7 +7,11 @@ let boy2 = {
 	nerd: true
 }
 
+let name = boy.name
+let name2 = boy['name']
+
 let properties = Object.keys(boy)
+
 let position = 0
 while (position < properties.length) {
 	let propertyName = properties[position]

@@ -19,3 +19,4 @@ document.write(list[5])
 document.write('<br>')
 
 document.write(list[list.length - 1])
+

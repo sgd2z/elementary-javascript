@@ -1,3 +1,13 @@
+.bigred {
+    font-size: 25px;
+    color: red
+}
+
+.smallblue {
+    font-size: 10px;
+    color: blue
+}
+
 .big {
     font-size: 25px
 }

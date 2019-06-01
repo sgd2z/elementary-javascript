@@ -5,7 +5,7 @@ while (counter < 11) {
 	counter = counter + 1
 }
 
-let counter = 5
+counter = 5
 while (counter < 51) {
 	document.write(counter)
 	document.write('<br>')
