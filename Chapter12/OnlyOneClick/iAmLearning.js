@@ -8,12 +8,12 @@ let myButton = document.createElement('button')
 // create a function that we will call when the button is clicked:
 const doSomethingWhenButtonIsClicked = () => {
 	// remove the listener when the button is clicked.
-	myButton.removeEventListener("click", doSomethingWhenButtonIsClicked)
+	myButton.removeEventListener('click', doSomethingWhenButtonIsClicked)
 	alert(myTextBox.value); // show a popup with the text in the textbox
 }
 
 // addEventListener is how we listen to when things happen:
-myButton.addEventListener("click", doSomethingWhenButtonIsClicked)
+myButton.addEventListener('click', doSomethingWhenButtonIsClicked)
 
 myButton.innerHTML = 'Click Me!'
 myDiv.appendChild(myButton)

@@ -1,3 +1,21 @@
+div {
+    font-size: 20px;
+    color: red;
+    background-color: black;
+    border-color: lightblue;
+    border-width: 1px;
+    border-style: solid
+}
+
+#thisIsMyDiv {
+    font-size: 15px;
+    color: cyan;
+    background-color: navy;
+    border-color: red;
+    border-width: 5px;
+    border-style: dashed
+}
+
 .bigred {
     font-size: 25px;
     color: red
@@ -23,3 +41,10 @@
 .purple {
     color: purple
 }
+
+.fiftypercent {
+    width: 50%
+}
+
+
+
