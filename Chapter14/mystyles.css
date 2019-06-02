@@ -1,15 +1,23 @@
-.big {
-    font-size: 25px
+.outerdiv {
+    box-sizing: border-box;
+    width: 200px;
+    border: 1px;
+    border-color: yellowgreen;
+    border-style: solid;
+    padding: 0px;
+    margin: 0px;
+    padding: 5px;
 }
-.small {
-    font-size: 10px
+
+.innerdiv {
+    box-sizing: border-box;
+    width: 100%;
+    border-width: 20px;
+    border-color: navy;
+    border-style: solid;
+    margin: 0px;
+    padding: 20px;
+    background-color: cyan; 
 }
-.red {
-    color: red
-}
-.blue {
-    color: blue
-}
-.purple {
-    color: purple
-}
+
+
