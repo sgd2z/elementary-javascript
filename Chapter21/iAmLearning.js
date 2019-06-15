@@ -1,3 +1,17 @@
+const doThisAfterTenSeconds = () => {
+	alert("10 seconds are up")
+}
+
+// call doThisAfterTenSeconds after 10 seconds
+let timeout = setTimeout(doThisAfterTenSeconds, 10000)
+
+const doThisAfterFiveSeconds = () => {
+	clearTimeout(timeout)
+	alert("5 seconds are up")
+}
+
+let timeout2 = setTimeout(doThisAfterFiveSeconds, 5000)
+
 // create a div to show the countdown
 let countdownDiv = document.createElement('div')
 document.body.appendChild(countdownDiv)
@@ -11,16 +25,16 @@ countdownDiv.innerHTML = numberOfSecondsToCountdown
 let intervalId
 
 const countDown = () => {
-   // decrease the countdown time
-   numberOfSecondsToCountdown = numberOfSecondsToCountdown - 1
+	// decrease the countdown time
+	numberOfSecondsToCountdown = numberOfSecondsToCountdown - 1
 
-   // update the div with the number of seconds remaining
-   countdownDiv.innerHTML = numberOfSecondsToCountdown
+	// update the div with the number of seconds remaining
+	countdownDiv.innerHTML = numberOfSecondsToCountdown
 
-   // Stop counting when we reach zero
-   if (numberOfSecondsToCountdown === 0) {
-      clearInterval(intervalId)
-   }
+	// Stop counting when we reach zero
+	if (numberOfSecondsToCountdown === 0) {
+		clearInterval(intervalId)
+	}
 }
 
 // Call the countdown function every second
