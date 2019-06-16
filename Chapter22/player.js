@@ -3,8 +3,10 @@ import PokemonCard from './pokemonCard.js'
 class Player {
     /**
      * A player has the following properties
-     * @param {String} name 
+     * @param {String} name
      * @param {Array<PokemonCard>} cards 
+     * @param {HTMLDivElement} div
+     * @param {*} game
      */
     constructor(name, cards, div, game) {
         this.name = name
@@ -32,11 +34,19 @@ class Player {
     }
     
     /**
-     * remove the card at index from this.cards
-     * @param {Number} index 
+     * remove the card specified from the list of cards
+     * @param {PokemonCard} card
      */
-    removeCard(index) {
-        this.cards.splice(index, 1)
+    removeCard(card) {
+        let position = 0;
+        while (position < this.cards.length) {
+            let cardAtPosition = this.cards[position]
+            if (cardAtPosition === card) {
+                this.cards.splice(position, 1)
+                return
+            }
+            position = position + 1
+        }
 	}
 	
 	/**

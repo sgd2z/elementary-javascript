@@ -27,3 +27,14 @@
 	max-height: 30%;
 	padding: 1%;
 }
+
+#playerCardsDiv {
+	display: flex;
+	justify-content: space-between
+}
+
+#turnDiv {
+	font-size: 25px;
+	text-align: center;
+	font-family: 'Permanent Marker', cursive;
+}
