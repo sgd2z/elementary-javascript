@@ -28,13 +28,20 @@
 	padding: 1%;
 }
 
+
+
 #playerCardsDiv {
 	display: flex;
-	justify-content: space-between
+	justify-content: space-between;
+	align-items: center
 }
 
 #turnDiv {
 	font-size: 25px;
 	text-align: center;
 	font-family: 'Permanent Marker', cursive;
+}
+
+.cardImageWhileAttacking {
+	max-width: 40%;
 }

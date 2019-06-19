@@ -115,6 +115,7 @@ class Game {
 		if (this.turn == 1) {
 			// remove the cardImage CSS class from the card
 			card.imageElement.classList.remove('cardImage')
+			card.imageElement.classList.add('cardImageWhileAttacking')
 			// move the card image to the playerCardsDiv
 			this.playerCardsDiv.appendChild(card.imageElement)
 			// set order = 1 so it comes first
@@ -129,6 +130,7 @@ class Game {
 		} else { // Otherwise it is Player 2's turn, set Player 2's card to "card" and give Player 1 their turn
 			// remove the cardImage CSS class from the card
 			card.imageElement.classList.remove('cardImage')
+			card.imageElement.classList.add('cardImageWhileAttacking')
 			// move the card image to the playerCardsDiv
 			this.playerCardsDiv.appendChild(card.imageElement)
 			// set order = 1 so it comes second
