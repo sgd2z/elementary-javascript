@@ -34,6 +34,14 @@ class Game {
 		this.playerCardsDiv.id = "playerCardsDiv"
 		this.battleArena.appendChild(this.playerCardsDiv)
 
+		this.player1CardDiv = document.createElement('div')
+		this.player1CardDiv.classList.add("arenaCardDiv")
+		this.playerCardsDiv.appendChild(this.player1CardDiv)
+
+		this.player2CardDiv = document.createElement('div')
+		this.player2CardDiv.classList.add("arenaCardDiv")
+		this.playerCardsDiv.appendChild(this.player2CardDiv)
+
 		// create the main container div
 		let mainDiv = document.createElement('div')
 		mainDiv.id = "maindiv"
@@ -129,7 +137,7 @@ class Game {
 			card.imageElement.classList.remove('cardImage')
 			card.imageElement.classList.add('cardImageWhileAttacking')
 			// move the card image to the playerCardsDiv
-			this.playerCardsDiv.appendChild(card.imageElement)
+			this.player1CardDiv.appendChild(card.imageElement)
 			// set order = 1 so it comes first
 			card.imageElement.style.order = 1
 			this.player1Card = card
@@ -144,7 +152,7 @@ class Game {
 			card.imageElement.classList.remove('cardImage')
 			card.imageElement.classList.add('cardImageWhileAttacking')
 			// move the card image to the playerCardsDiv
-			this.playerCardsDiv.appendChild(card.imageElement)
+			this.player2CardDiv.appendChild(card.imageElement)
 			// set order = 1 so it comes second
 			card.imageElement.style.order = 2
 			this.player2Card = card
