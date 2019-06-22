@@ -43,5 +43,9 @@
 }
 
 .cardImageWhileAttacking {
-	max-width: 40%;
+	max-width: 90%;
+}
+
+.arenaCardDiv {
+	max-width: 45%;
 }
