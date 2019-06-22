@@ -53,7 +53,7 @@ class PokemonCard {
      * Return a random attack for this card
      */
     attack() {
-        let randomIndex = Math.floor(Math.random(this.attacks.length))
+        let randomIndex = Math.floor(Math.random() * this.attacks.length)
         return this.attacks[randomIndex]
     }
 
