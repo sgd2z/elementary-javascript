@@ -43,6 +43,10 @@ class Player {
             let cardAtPosition = this.cards[position]
             if (cardAtPosition === card) {
                 this.cards.splice(position, 1)
+                // if there are no cards left, the player loses
+                if (this.cards.length === 0) {
+                    this.game.end(this)
+                }
                 return
             }
             position = position + 1

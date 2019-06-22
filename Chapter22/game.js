@@ -79,6 +79,12 @@ class Game {
 			await Helper.numberOfSeconds(2)
 			// attack player 2's card:
 			this.player2Card.damage(attack.damage)
+
+			// Don't continue if the game is over.
+			if (this.gameOver) {
+				return
+			}
+
 			// now it is player 2's turn to attack
 			this.attacker = 2
 			// If player 2's card is defeated:
@@ -96,6 +102,12 @@ class Game {
 			this.showAttackInfo(2, this.player2Card, attack)
 			await Helper.numberOfSeconds(2)
 			this.player1Card.damage(attack.damage)
+
+			// Don't continue if the game is over.
+			if (this.gameOver) {
+				return
+			}
+
 			this.attacker = 1
 			if (this.player1Card.HP <= 0) {
 				this.setTurn(1)
@@ -157,6 +169,21 @@ class Game {
 		this.setTurn(1)
 		this.attacker = 1
 		this.player1.play()
+	}
+
+	/**
+	 * End the game
+	 * @param {Player} player the player that lost
+	 */
+	end(player) {
+		// The game is over!
+		this.gameOver = true
+		if (player === this.player1) {
+			this.turnDiv.innerHTML = "Player 2 Wins!"
+		} else {
+			this.turnDiv.innerHTML = "Player 1 Wins!"
+		}
+		this.attackDiv.innerHTML = ""
 	}
 }
 
