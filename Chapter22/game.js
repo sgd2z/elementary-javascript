@@ -145,7 +145,7 @@ class Game {
 			card.imageElement.classList.add('cardImageWhileAttacking')
 			// move the card image to the playerCardsDiv
 			this.playerCardsDiv.appendChild(card.imageElement)
-			// set order = 1 so it comes second
+			// set order = 2 so it comes second
 			card.imageElement.style.order = 2
 			this.player2Card = card
 			if (this.player1Card !== undefined) {

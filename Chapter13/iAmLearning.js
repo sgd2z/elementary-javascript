@@ -1,5 +1,5 @@
 let myDiv = document.createElement('div')
-myDiv.id ="thisIsMyDiv"
+myDiv.id ='thisIsMyDiv'
 myDiv.innerHTML = "Hi! I'm some text in a div."
 document.body.appendChild(myDiv)
 
