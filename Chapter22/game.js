@@ -73,7 +73,7 @@ class Game {
 	async fight() {
 		this.turnDiv.innerHTML = ""
 		if (this.attacker === 1) {
-			// get the attach that Player 1's card makes
+			// get the attack that Player 1's card makes
 			let attack = this.player1Card.attack()
 			this.showAttackInfo(1, this.player1Card, attack)
 			await Helper.numberOfSeconds(2)
@@ -89,8 +89,6 @@ class Game {
 			this.attacker = 2
 			// If player 2's card is defeated:
 			if (this.player2Card.HP <= 0) {
-				// remove the defeated card
-				this.player2
 				// it is player 2's turn
 				this.setTurn(2)
 				this.player2.play()
