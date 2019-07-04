@@ -70,7 +70,7 @@ const PokemonAPI = {
             pokemon.attacks = goodAttacks
 
             // only use pokemon that have good attacks
-            if (pokemon.attacks.length > 0) {
+            if (pokemon.attacks.length > 0 && pokemon.hp > 0) {
                 // create a PokemonCard object from the card to use in the game
                 let pokemonCard = new PokemonCard(pokemon.name, pokemon.hp, pokemon.imageUrl, pokemon.attacks)
 
