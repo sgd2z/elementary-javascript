@@ -1,8 +1,8 @@
 div {
     font-size: 20px;
     color: red;
-    background-color: black;
-    border-color: lightblue;
+    background-color: lightgreen;
+    border-color: darkgreen;
     border-width: 1px;
     border-style: solid
 }
