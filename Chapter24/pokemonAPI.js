@@ -47,16 +47,16 @@ const PokemonAPI = {
             let randomIndex = randomBetween(0, pokemonList.length - 1)
             let pokemon = pokemonList[randomIndex]
 
+            // if the pokemon has no attacks, move on to the next card
+            if (pokemon.attacks === undefined) {
+                continue
+            }
+
             // create a new list of good attacks
             let goodAttacks = []
 
             // add all attacks where the damage can be converted to a number to good attacks.
             let position = 0
-
-            // if the pokemon has no attacks, move on to the next card
-            if (pokemon.attacks === undefined) {
-                continue
-            }
             while (position < pokemon.attacks.length) {
                 let attack = pokemon.attacks[position]
                 attack.damage = parseInt(attack.damage)
