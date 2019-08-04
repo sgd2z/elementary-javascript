@@ -1,7 +1,9 @@
 # Elementary Javascript
 
-I am writing a book to teach kids how to code in JavaScript. The book is still a work in progress. Here is a link to the book. It is available online while the book is a work in progress:
+This repository contains all the code for the Book "Elementary JavaScript - Programming for Elementary and Middle School Kids".
 
-https://1drv.ms/w/s!AlY6sDe0MB8sg6E82V5FNQ70L8ljZw
+eBook is available here - https://s1dd.com/product/elementary-javascript-programming-for-elementary-and-middle-school-kids/
 
-The Code for each chapter is in the respective Chapter folders. Things may change at any time.
+Paperback is coming soon to Amazon and Barnes and Noble.
+
+The Code for each chapter is in the respective Chapter folders.
